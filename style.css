@@ -1,0 +1,38 @@
+.center-container
+{
+  text-align:center;
+  border: 2px solid black;
+}
+
+.collection
+{
+  text-align: left;
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.Topbullets
+{
+  text-align: left;
+  list-style-type: none;
+  font-size: 25px;
+  color:purple;
+}
+
+p
+{
+  font-size:40px;
+}
+
+#a1
+{
+  text-decoration: none;
+  color:seagreen;
+}
+
+#filter
+{
+  width:80%;
+  border:none;
+  border-bottom: 1px solid grey;
+}

@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css"
+  <title>Filterable List</title>
+</head>
+<body>
+  <div class="center-container">
+    <p><cite>My Contacts</cite></p>
+  <input type="text" placeholder="Search for the Name" id="filter">
+  <ul id="names">
+    <li class="Topbullets">
+      <h4>A</h4>
+    </li>
+      <li class="collection"><a id="a1" href="#">Amar</a></li>
+      <li class="collection"><a id="a1" href="#">Akbar</a></li>
+      <li class="collection"><a id="a1" href="#">Anthony</a></li>
+    <li class="Topbullets">
+      <h4>B</h4>
+    </li>
+      <li class="collection"><a id="a1" href="#">Brad</a></li>
+      <li class="collection"><a id="a1" href="#">Baba</a></li>
+      <li class="collection"><a id="a1" href="#">Brice</a></li>
+    <li class="Topbullets">
+      <h4>C</h4>
+    </li>
+      <li class="collection"><a id="a1" href="#">Chandan</a></li>
+      <li class="collection"><a id="a1" href="#">CharMinar</a></li>
+      <li class="collection"><a id="a1" href="#">Chameli</a></li>
+  <script>
+    let filter=document.getElementById('filter');
+    filter.addEventListener('keyup',filternames)
+
+    function filternames(){
+      var filtervalue=document.getElementById('filter').value.toUpperCase();
+
+      var ul=document.getElementById('names');
+
+      var li=ul.querySelectorAll('li.collection');
+
+      for(var i=0;i<li.length;i++)
+      {
+        let a=li[i].getElementsByTagName('a')[0];
+
+        if(a.innerHTML.toUpperCase().indexOf(filtervalue)>-1)
+        {
+          li[i].style.display='';
+        }
+        else {
+          li[i].style.display='none';
+        }
+      }
+
+    }
+  </script>
+</div>
+</body>
+</html>
